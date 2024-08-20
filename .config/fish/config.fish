@@ -30,3 +30,6 @@ source "$HOME/.cargo/env.fish"
 
 # opam configuration
 source /home/brian/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+set -x VISUAL nvim
+set -x EDITOR nvim
