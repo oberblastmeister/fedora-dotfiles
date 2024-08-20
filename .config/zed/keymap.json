@@ -9,7 +9,7 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "ctrl-e": "project_panel::ToggleFocus"
+      "ctrl-e": "project_panel::ToggleFocus",
       // "a": "project_panel::NewFile",
       // "A": "project_panel::NewDirectory",
       // "x": "project_panel::Cut",
@@ -34,6 +34,7 @@
       "ctrl-k": ["workspace::SendKeystrokes", "ctrl-w k"],
       "ctrl-j": ["workspace::SendKeystrokes", "ctrl-w j"],
       "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-w p": "workspace::ToggleLeftDock",
       "ctrl-e": "project_panel::ToggleFocus",
       "] g": "editor::GoToDiagnostic",
       "[ g": "editor::GoToPrevDiagnostic",

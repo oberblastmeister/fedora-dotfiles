@@ -15,13 +15,24 @@ packages = [
     'git',
     'cascadia-code-fonts',
     'starship',
+    'evince',
 ]
+
+copr_packages = [
+    ('atim/bottom', 'bottom'),
+]
+
+def install_copr():
+    for copr, _ in copr_packages:
+        run(["sudo", "dnf", "copr", "enable", copr])
+    run(["sudo", "dnf", "install"] + [package for _, package in copr_packages])
 
 def install():
     run(["sudo", "dnf", "install"] + packages)
 
 def main():
     install()
+    install_copr()
 
 if __name__ == '__main__':
     main()
