@@ -15,8 +15,10 @@ end
 if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
+    starship init fish | source
 
     alias code="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto"
+    alias zed="zed --new"
     alias vim=nvim
     alias top=btm
     alias ly=yazi_cd

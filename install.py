@@ -14,6 +14,7 @@ packages = [
     'curl',
     'git',
     'cascadia-code-fonts',
+    'starship',
 ]
 
 def install():
