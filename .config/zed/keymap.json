@@ -1,0 +1,84 @@
+[
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-t": "workspace::ToggleBottomDock",
+      "ctrl-n": "workspace::NewTerminal"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "ctrl-e": "project_panel::ToggleFocus"
+      // "a": "project_panel::NewFile",
+      // "A": "project_panel::NewDirectory",
+      // "x": "project_panel::Cut",
+      // "y": "project_panel::Copy",
+      // "F": "project_panel::RevealInFinder"
+    }
+  },
+  {
+    "context": "!Terminal",
+    "bindings": {
+      "ctrl-t": "terminal_panel::ToggleFocus",
+    }
+  },
+  // normal mode
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-p": "file_finder::Toggle",
+      "ctrl-shift-p": "command_palette::Toggle",
+      "ctrl-l": ["workspace::SendKeystrokes", "ctrl-w l"],
+      "ctrl-h": ["workspace::SendKeystrokes", "ctrl-w h"],
+      "ctrl-k": ["workspace::SendKeystrokes", "ctrl-w k"],
+      "ctrl-j": ["workspace::SendKeystrokes", "ctrl-w j"],
+      "ctrl-w t": "terminal_panel::ToggleFocus",
+      "ctrl-e": "project_panel::ToggleFocus",
+      "] g": "editor::GoToDiagnostic",
+      "[ g": "editor::GoToPrevDiagnostic",
+      "g r": "editor::FindAllReferences",
+      "g y": "editor::GoToTypeDefinition",
+      "shift-k": "editor::Hover",
+      "space l a": "editor::ToggleCodeActions",
+      "space l r": "editor::Rename",
+      "space l R": "editor::RestartLanguageServer",
+      "space l D": "debug::OpenLanguageServerLogs",
+      "space =": "editor::Format",
+      "space l l": "diagnostics::Deploy",
+      "space w": "workspace::SaveWithoutFormat",
+      "space q": "pane::CloseAllItems",
+      "space f t": "project_symbols::Toggle",
+      "space f s": "outline::Toggle",
+      "space t s": "task::Spawn",
+      "space t r": "task::Rerun"
+    }
+  },
+  // insert mode
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "ctrl-space": "editor::ShowCompletions"
+    }
+  },
+  // these will happen even in the menu
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-a": "editor::MoveToBeginningOfLine"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "ctrl-enter": "editor::OpenExcerpts"
+    }
+  },
+  {
+    "context": "BufferSearchBar",
+    "bindings": {
+      "ctrl-[": "buffer_search::Dismiss"
+    }
+  }
+]

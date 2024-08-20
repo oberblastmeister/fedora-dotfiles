@@ -1,0 +1,845 @@
+{
+    "vim.leader": "<space>",
+    "vim.surround": true,
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.enable": true,
+    "vim.debug.loggingLevelForConsole": "debug",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "<C-a>"
+            ],
+            "commands": [
+                "cursorHome"
+            ]
+        },
+        {
+            "before": [
+                "<C-e>"
+            ],
+            "commands": [
+                "cursorEnd"
+            ]
+        },
+        {
+            "before": [
+                "<C-f>"
+            ],
+            "commands": [
+                "cursorRight"
+            ]
+        },
+        {
+            "before": [
+                "<C-b>"
+            ],
+            "commands": [
+                "cursorLeft"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // navigation
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "after": [
+                "<C-w>",
+                "C-l"
+            ]
+        },
+        {
+            "before": [
+                "<C-h>"
+            ],
+            "after": [
+                "<C-w>",
+                "C-h"
+            ]
+        },
+        {
+            "before": [
+                "<C-k>"
+            ],
+            "after": [
+                "<C-w>",
+                "C-k"
+            ]
+        },
+        {
+            "before": [
+                "<C-j>"
+            ],
+            "after": [
+                "<C-w>",
+                "C-j"
+            ]
+        },
+        // lsp stuff
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "g"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "g"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "G"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "G"
+            ],
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "y"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "D"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "="
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "a"
+            ],
+            "commands": [
+                "keyboard-quickfix.openQuickFix"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "l"
+            ],
+            "commands": [
+                "codelens.showLensesInCurrentLine"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<leader>"
+            ],
+            "commands": [
+                "editor.action.openLink"
+            ]
+        },
+        // git stuff
+        {
+            "before": [
+                "<leader>",
+                "h",
+                "r"
+            ],
+            "commands": [
+                "git.revertSelectedRanges"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "h",
+                "s"
+            ],
+            "commands": [
+                "git.stageSelectedRanges"
+            ]
+        },
+        // default stuff
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                ":write"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                ":quit"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                ":only"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "/"
+            ],
+            "commands": [
+                "editor.action.startFindReplaceAction"
+            ]
+        },
+        {
+            "before": [
+                "<C-b>"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "<C-e>"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before": [
+                "<tab>"
+            ],
+            "commands": [
+                "editor.fold"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "c"
+            ],
+            "after": [
+                "g",
+                "c",
+                "c"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "after": [
+                "g",
+                "c"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        }
+    ],
+    "vscode-neovim.neovimExecutablePaths.linux": "nvim",
+    // turn off fuzzy finding on type in exploerer
+    "workbench.list.automaticKeyboardNavigation": false,
+    "editor.lineNumbers": "relative",
+    // scrolling
+    "editor.smoothScrolling": false,
+    "workbench.list.smoothScrolling": true,
+    // fonts
+    "editor.fontWeight": "normal",
+    "editor.fontFamily": "Cascadia Code, FiraCode Nerd Font",
+    "editor.fontLigatures": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // do not accept completions on enter
+    "editor.acceptSuggestionOnEnter": "off",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.enableTelemetry": false,
+    "editor.largeFileOptimizations": false,
+    // "outline.problems.colors": false,
+    "problems.showCurrentInStatus": true,
+    "redhat.telemetry.enabled": false,
+    "workbench.startupEditor": "none",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/*.olean": true
+    },
+    "editor.cursorBlinking": "solid",
+    "editor.suggest.localityBonus": true,
+    "terminal.integrated.scrollback": 100000,
+    // languages
+    "vim.foldfix": true,
+    "gitlens.codeLens.enabled": false,
+    "[markdown]": {
+        "editor.tabSize": 2,
+    },
+    "[haskell]": {
+        "editor.tabSize": 2,
+    },
+    "[agda]": {
+        "editor.tabSize": 2,
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+    },
+    "[idris]": {
+        "editor.tabSize": 2,
+        "editor.unicodeHighlight.ambiguousCharacters": false
+    },
+    "[racket]": {
+        "editor.bracketPairColorization.enabled": true,
+        "editor.tabSize": 1,
+        "editor.autoClosingBrackets": "never",
+        "editor.autoClosingOvertype": "never",
+        "editor.autoClosingQuotes": "never"
+    },
+    "[cabal]": {
+        "editor.tabSize": 2,
+    },
+    "[lua]": {
+        "editor.tabSize": 2
+    },
+    "[nix]": {
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
+    "[latex]": {
+        "editor.tabSize": 2
+    },
+    "[makefile]": {
+        "editor.insertSpaces": false,
+        "editor.detectIndentation": false,
+    },
+    "[coq]": {
+        "editor.tabSize": 2
+    },
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "nix.enableLanguageServer": true,
+    "markdown.extension.math.enabled": false,
+    "cSpell.enabledLanguageIds": [
+        "markdown"
+    ],
+    "security.workspace.trust.enabled": false,
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    },
+    "whichkey.delay": 500,
+    "whichkey.bindings": [
+        {
+            "key": "w",
+            "name": "write",
+            "command": "workbench.action.files.save",
+        },
+        {
+            "key": "q",
+            "name": "quit",
+            "command": "workbench.action.closeEditorsInGroup",
+        },
+        {
+            "key": "Q",
+            "name": "quit all",
+            "command": "workbench.action.closeAllEditors",
+        },
+        {
+            "key": "x",
+            "name": "save and quit",
+            "command": "vscode-neovim.send",
+            "args": ":Wq<CR>",
+        },
+        {
+            "key": "o",
+            "name": "only",
+            "command": "vscode-neovim.send",
+            "args": ":Only<CR>",
+        },
+        {
+            "key": "=",
+            "name": "format document",
+            "command": "editor.action.formatDocument",
+        },
+        {
+            "key": "a",
+            "name": "code actions",
+            "command": "keyboard-quickfix.openQuickFix",
+        },
+        {
+            "key": "L",
+            "name": "code lens",
+            "command": "codelens.showLensesInCurrentLine",
+        },
+        {
+            "key": "l",
+            "name": "lsp",
+            "bindings": [
+                {
+                    "key": "R",
+                    "name": "rename",
+                    "command": "editor.action.rename",
+                },
+                {
+                    "key": "y",
+                    "name": "type definition",
+                    "command": "editor.action.goToTypeDefinition",
+                },
+                {
+                    "key": "r",
+                    "name": "references",
+                    "command": "editor.action.goToReferences",
+                },
+            ],
+        },
+        {
+            "key": "space",
+            "name": "open link",
+            "command": "editor.action.openLink",
+        },
+        {
+            "key": "h",
+            "name": "Hunk",
+            "bindings": [
+                {
+                    "key": "r",
+                    "name": "revert",
+                    "command": "git.revertSelectedRanges",
+                },
+                {
+                    "key": "s",
+                    "name": "stage",
+                    "command": "git.stageSelectedRanges",
+                },
+                {
+                    "key": "v",
+                    "name": "view",
+                    "command": "editor.action.dirtydiff.next"
+                }
+            ],
+        },
+        {
+            "key": "g",
+            "name": "git",
+            "bindings": [
+                {
+                    "key": "s",
+                    "name": "magit status",
+                    "command": "magit.status",
+                },
+                {
+                    "key": "d",
+                    "name": "show changes",
+                    "command": "git.openChange"
+                }
+            ]
+        },
+        {
+            "key": "b",
+            "name": "buffers",
+            "bindings": [
+                {
+                    "key": "d",
+                    "name": "delete",
+                    "command": "vscode-neovim.send",
+                    "args": ":Tabclose<CR>"
+                },
+            ],
+        },
+        // {
+        //     "key": "t",
+        //     "name": "tab",
+        //     "bindings": [
+        //         {
+        //             "key": "d",
+        //             "name": "close tab",
+        //             "command": "workbench.action.closeActiveEditor"
+        //         }
+        //     ],
+        // },
+        {
+            "key": "d",
+            "name": "debug",
+            "bindings": [
+                {
+                    "key": "c",
+                    "name": "continue",
+                    "command": "workbench.action.debug.continue",
+                    "when": "debugStart == 'stopped'"
+                },
+                {
+                    "key": "s",
+                    "name": "start",
+                    "command": "workbench.action.debug.start",
+                    "when": "debuggersAvailable && debugState == 'inactive'"
+                },
+                {
+                    "key": "S",
+                    "name": "stop",
+                    "command": "workbench.action.debug.stop",
+                    "when": "inDebugMode && !focusedSessionIsAttach"
+                },
+                {
+                    "key": "r",
+                    "name": "restart",
+                    "command": "workbench.action.debug.restart",
+                    "when": "inDebugMode"
+                },
+                {
+                    "key": "-",
+                    "name": "step in",
+                    "command": "workbench.action.debug.stepInto",
+                    "when": "debugState != 'inactive'"
+                },
+                {
+                    "key": "+",
+                    "name": "step out",
+                    "command": "workbench.action.debug.stepOut",
+                    "when": "debugState == 'stopped'"
+                },
+                {
+                    "key": "o",
+                    "name": "step over",
+                    "command": "workbench.action.debug.stepOver",
+                    "when": "debugState == 'stopped'"
+                },
+                {
+                    "key": "b",
+                    "name": "breakpoint",
+                    "bindings": [
+                        {
+                            "key": "t",
+                            "name": "toggle",
+                            "command": "editor.debug.action.toggleBreakpoint",
+                        },
+                        {
+                            "key": "T",
+                            "name": "toggle",
+                            "command": "editor.debug.action.toggleInlineBreakpoint",
+                        },
+                        {
+                            "key": "f",
+                            "name": "function",
+                            "command": "workbench.debug.viewlet.action.addFunctionBreakpointAction",
+                        },
+                        {
+                            "key": "e",
+                            "name": "edit",
+                            "command": "debug.editBreakpoint",
+                        },
+                        {
+                            "key": "-",
+                            "name": "disable all",
+                            "command": "workbench.debug.viewlet.action.disableAllBreakpoints",
+                        },
+                        {
+                            "key": "_",
+                            "name": "remove all",
+                            "command": "workbench.debug.viewlet.action.removeAllBreakpoints",
+                        },
+                        {
+                            "key": "=",
+                            "name": "enable all",
+                            "command": "workbench.debug.viewlet.action.enableAllBreakpoints",
+                        },
+                        {
+                            "key": "c",
+                            "name": "conditional",
+                            "command": "editor.debug.action.conditionalBreakpoint",
+                        }
+                    ]
+                }
+            ],
+        },
+        {
+            "key": "f",
+            "name": "find",
+            "bindings": [
+                {
+                    "key": "p",
+                    "name": "files",
+                    "command": "workbench.action.quickOpen"
+                },
+                {
+                    "key": "s",
+                    "name": "symbols",
+                    "command": "workbench.action.gotoSymbol",
+                },
+                {
+                    "key": "w",
+                    "name": "workspace symbols",
+                    "command": "workbench.action.showAllSymbols",
+                },
+                {
+                    "key": "c",
+                    "name": "commands",
+                    "command": "workbench.action.showCommands",
+                },
+                {
+                    "key": "r",
+                    "name": "recent",
+                    "command": "workbench.action.openRecent",
+                },
+                {
+                    "key": "b",
+                    "name": "buffers (editors)",
+                    "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
+                }
+                // {
+                //     "key": "t",
+                //     "name": "terminals",
+                //     "command": 
+                // }
+            ],
+        },
+        {
+            "key": "B",
+            "name": "toggle sidebar",
+            "command": "workbench.action.toggleSidebarVisibility",
+        },
+        {
+            "key": "/",
+            "name": "replace in files",
+            "command": "workbench.action.replaceInFiles",
+        },
+    ],
+    "workbench.panel.defaultLocation": "right",
+    "extensions.ignoreRecommendations": true,
+    "telemetry.telemetryLevel": "off",
+    // stop vscode update messages
+    "update.mode": "none",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/brian/.nix-profile/bin/black",
+    // support match statements
+    // https://github.com/psf/black/issues/2242
+    "python.formatting.blackArgs": [
+        "--target-version",
+        "py310"
+    ],
+    "python.languageServer": "Pylance",
+    "texlab.server.autoDownload": true,
+    "texlab.build.onSave": true,
+    "texlab.forwardSearch.executable": "zathura",
+    "texlab.forwardSearch.args": [
+        "--synctex-forward",
+        "%l:1:%f",
+        "%p"
+    ],
+    // See `tectonic --help` for the format
+    "texlab.build.executable": "tectonic",
+    "texlab.build.args": [
+        // Input
+        "%f",
+        // Flags
+        "--synctex",
+        "--keep-logs",
+        "--keep-intermediates"
+        // Options
+        // OPTIONAL: If you want a custom out directory,
+        // uncomment the following line.
+        //"--outdir out",
+    ],
+    "haskell.plugin.ghcide-completions.config.snippetsOn": false,
+    "haskell.plugin.ghcide-completions.config.autoExtendOn": false,
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "editor.fontSize": 16,
+    "errorLens.followCursor": "closestProblem",
+    "errorLens.statusBarMessageType": "closestProblem",
+    "errorLens.enabled": false,
+    "files.insertFinalNewline": true,
+    "task.problemMatchers.neverPrompt": {
+        "process": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "typst": false
+    },
+    "files.associations": {
+        "*.dump-simpl": "haskell",
+        "*.dump-splices": "haskell",
+        "*.h": "c",
+        "cabal.project": "cabal",
+        "cabal.project.local": "cabal",
+    },
+    "haskell.plugin.rename.config.crossModule": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "clangd.checkUpdates": false,
+    "clangd.arguments": [
+        "--header-insertion=never"
+    ],
+    "git.mergeEditor": true,
+    "githubPullRequests.fileListLayout": "tree",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "git.detectSubmodules": false,
+    "asm-code-lens.donated": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[Gruvbox Medium Dark]": {
+            "rules": {
+                "*.mutable": {
+                    "bold": true,
+                },
+                "*.unsafe": {
+                    "underline": true,
+                    "bold": true
+                }
+            }
+        },
+        "[Gruvbox Material Dark]": {
+            "rules": {
+                "*.mutable": {
+                    "bold": true,
+                },
+                "*.unsafe": {
+                    "underline": true,
+                    "bold": true
+                }
+            }
+        }
+    },
+    "workbench.reduceMotion": "off",
+    "gruvboxMaterial.darkPalette": "original",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "editor.tokenColorCustomizations": {
+        "[Gruvbox Material Dark]": {
+            "textMateRules": [
+                // {
+                //     "scope": "keyword.operator",
+                //     "settings": {
+                //         "foreground": "#FF0000"
+                //     }
+                // }
+            ]
+        }
+    },
+    "settingsSync.ignoredSettings": [
+        "workbench.colorTheme",
+        "haskell.serverExecutablePath",
+        "-agdaMode.connection.agdaPath"
+    ],
+    "explorer.confirmDelete": false,
+    "gluon.language-server.path": "/home/brian/.cargo/bin/gluon_language-server",
+    // "haskell.serverExecutablePath": "/home/brian/projects/haskell-language-server/dist-newstyle/build/x86_64-linux/ghc-9.2.4/haskell-language-server-1.8.0.0/x/haskell-language-server/build/haskell-language-server/haskell-language-server",
+    // "clangd.path": "/etc/profiles/per-user/brian/bin/clangd",
+    "lean4.elaborationDelay": 100,
+    // minimal ui settings
+    "editor.glyphMargin": false,
+    "editor.minimap.enabled": false,
+    "editor.folding": false,
+    "window.menuBarVisibility": "toggle",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.overviewRulerBorder": false,
+    "editor.renderWhitespace": "none",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.colorCustomizations": { // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference 
+        "tab.activeBorder": "#0000", // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
+        "tab.unfocusedActiveBorder": "#0000"
+    },
+    "haskell.plugin.class.codeLensOn": false,
+    "haskell.plugin.importLens.codeLensOn": false,
+    "haskell.plugin.refineImports.codeLensOn": false,
+    "haskell.plugin.tactics.codeLensOn": false,
+    "haskell.plugin.hlint.diagnosticsOn": false,
+    "zig.zls.path": "/home/brian/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "zig.zls.checkForUpdate": false,
+    "editor.experimental.useCustomCodeActionMenu": true,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.activityBar.location": "hidden",
+    "rust-analyzer.cargo.features": [
+        "kernel"
+    ],
+    "workbench.editor.tabActionCloseVisibility": false
+}
