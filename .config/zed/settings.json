@@ -22,6 +22,14 @@
   "scrollbar": { "show": "never" },
   // "theme": "Github Dark",
   "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "always"
+  },
+  "terminal": {
+    "shell": {
+      "program": "fish",
+    }
+  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false

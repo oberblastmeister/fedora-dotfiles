@@ -16,10 +16,15 @@ packages = [
     'cascadia-code-fonts',
     'starship',
     'evince',
+    'zathura',
+    'zathura-plugins-all',
+    'gthumb',
+    'gnome-software',
 ]
 
 copr_packages = [
     ('atim/bottom', 'bottom'),
+    ('alxhr0/Obsidian', 'obsidian'),
 ]
 
 def install_copr():

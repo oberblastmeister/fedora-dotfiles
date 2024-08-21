@@ -22,5 +22,8 @@ if vim.g.vscode then
   nnoremap <C-w>p <Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
   ]]
 else
+  vim.cmd[[
+  
+  ]]
 end
 

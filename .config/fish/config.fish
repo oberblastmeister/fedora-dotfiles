@@ -26,6 +26,8 @@ if status is-interactive
     bind \co yazi_cd_repaint
 end
 
+fish_add_path ~/.local/share/bin
+
 source "$HOME/.cargo/env.fish"
 
 # opam configuration
