@@ -841,5 +841,5 @@
     "rust-analyzer.cargo.features": [
         "kernel"
     ],
-    "workbench.editor.tabActionCloseVisibility": false
+    "vscoq.proof.mode": 1
 }

@@ -16,6 +16,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     zoxide init fish | source
     starship init fish | source
+    direnv hook fish | source
 
     alias code="code --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto"
     alias zed="zed --new"

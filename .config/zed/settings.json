@@ -6,66 +6,67 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "show_inline_completions": true,
-  "theme": "One Dark",
-  "tab_bar": {
-    "show": true,
-    "show_nav_history_buttons": false
-  },
-  "format_on_save": "off",
-  "ensure_final_newline_on_save": true,
-  // disable cursor blink
-  "cursor_blink": false,
-  // use relative line numbers
-  "relative_line_numbers": true,
-  // hide the scroll bar
-  "scrollbar": { "show": "never" },
-  // "theme": "Github Dark",
-  "vim_mode": true,
-  "vim": {
-    "use_system_clipboard": "always"
-  },
-  "terminal": {
-    "shell": {
-      "program": "fish",
-    }
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "buffer_line_height": "standard",
-  // "buffer_line_heigh6": "comfortable",
-  // "Zed Mono": "Cascadia Code",
-  // "buffer_font_family": "Fira Code Retina",
-  "buffer_font_family": "Cascadia Code",
-  "ui_font_family": "Cascadia Code",
-  // "ui_font_family": "Zed Mono",
-  // "ui_font_family": "Fira Code Retina",
-  // "buffer_font_family": "Zed Mono",
-  "project_panel": {
-    "folder_icons": true
-  },
-  "languages": {
-    "Haskell": {
-      "language_servers": ["hls", "!static-ls", "..."],
-      "tab_size": 2
-    }
-  },
-  "lsp": {
-    "hls": {
-      "initialization_options": {
-        "haskell": {
-          "formattingProvider": "ormolu",
-          "plugin": {
-            "hlint": {
-              "globalOn": false
-            }
-          }
+    "show_inline_completions": true,
+    "theme": "Gruvbox Material Dark",
+    "tab_bar": {
+        "show": true,
+        "show_nav_history_buttons": false
+    },
+    "format_on_save": "off",
+    "ensure_final_newline_on_save": true,
+    // disable cursor blink
+    "cursor_blink": false,
+    // use relative line numbers
+    "relative_line_numbers": true,
+    // hide the scroll bar
+    "scrollbar": { "show": "never" },
+    // "theme": "Github Dark",
+    "vim_mode": true,
+    "vim": {
+        "use_system_clipboard": "always"
+    },
+    "terminal": {
+        "shell": {
+            "program": "fish"
         }
-      }
+    },
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false
+    },
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "buffer_line_height": "standard",
+    // "buffer_line_heigh6": "comfortable",
+    // "Zed Mono": "Cascadia Code",
+    // "buffer_font_family": "Fira Code Retina",
+    "buffer_font_family": "Cascadia Code",
+    "ui_font_family": "Cascadia Code",
+    // "ui_font_family": "Zed Mono",
+    // "ui_font_family": "Fira Code Retina",
+    // "buffer_font_family": "Zed Mono",
+    "project_panel": {
+        "folder_icons": true
+    },
+    "tab_size": 4,
+    "languages": {
+        "Haskell": {
+            "language_servers": ["hls", "!static-ls", "..."],
+            "tab_size": 2
+        }
+    },
+    "lsp": {
+        "hls": {
+            "initialization_options": {
+                "haskell": {
+                    "formattingProvider": "ormolu",
+                    "plugin": {
+                        "hlint": {
+                            "globalOn": false
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

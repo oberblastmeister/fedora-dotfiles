@@ -20,11 +20,14 @@ packages = [
     'zathura-plugins-all',
     'gthumb',
     'gnome-software',
+    'gh',
+    'direnv',
+    'just',
+    'tectonic',
 ]
 
 copr_packages = [
     ('atim/bottom', 'bottom'),
-    ('alxhr0/Obsidian', 'obsidian'),
 ]
 
 def install_copr():
