@@ -4,3 +4,5 @@ then
 	exec fish $LOGIN_OPTION
 fi
 . "$HOME/.cargo/env"
+
+[ -f "/home/brian/.ghcup/env" ] && . "/home/brian/.ghcup/env" # ghcup-env

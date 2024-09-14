@@ -6,6 +6,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+    "assistant": {
+        "default_model": {
+            "provider": "zed.dev",
+            "model": "claude-3-5-sonnet-20240620"
+        },
+        "version": "2"
+    },
     "show_inline_completions": true,
     "theme": "Gruvbox Material Dark",
     "tab_bar": {
@@ -28,6 +35,11 @@
     "terminal": {
         "shell": {
             "program": "fish"
+        },
+        "detect_venv": {
+            "on": {
+                "activate_script": "fish"
+            }
         }
     },
     "telemetry": {
@@ -50,12 +62,37 @@
     },
     "tab_size": 4,
     "languages": {
+        "Python": {
+            "language_servers": ["pyright", "ruff"],
+            "formatter": [
+                {
+                    "language_server": {
+                        "name": "ruff"
+                    }
+                }
+            ]
+        },
         "Haskell": {
             "language_servers": ["hls", "!static-ls", "..."],
+            "tab_size": 2
+        },
+        "OCaml": {
+            "tab_size": 2
+        },
+        "OCaml Interface": {
             "tab_size": 2
         }
     },
     "lsp": {
+        "lsp": {
+          "pyright": {
+            "settings": {
+              "python": {
+                "pythonPath": ".venv/bin/python"
+              }
+            }
+          }
+        },
         "hls": {
             "initialization_options": {
                 "haskell": {

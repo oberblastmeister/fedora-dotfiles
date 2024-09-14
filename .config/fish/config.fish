@@ -28,6 +28,9 @@ if status is-interactive
 end
 
 fish_add_path ~/.local/share/bin
+fish_add_path ~/.cabal/bin
+fish_add_path ~/.ghcup/bin
+set -Ua fish_user_paths "$HOME/.rye/shims"
 
 source "$HOME/.cargo/env.fish"
 

@@ -717,11 +717,10 @@
         // Flags
         "--synctex",
         "--keep-logs",
-        "--keep-intermediates"
+        "--keep-intermediates",
         // Options
-        // OPTIONAL: If you want a custom out directory,
-        // uncomment the following line.
-        //"--outdir out",
+        // Custom out directory
+        // "--outdir=out",
     ],
     "haskell.plugin.ghcide-completions.config.snippetsOn": false,
     "haskell.plugin.ghcide-completions.config.autoExtendOn": false,
@@ -841,5 +840,8 @@
     "rust-analyzer.cargo.features": [
         "kernel"
     ],
-    "vscoq.proof.mode": 1
+    "workbench.editor.tabActionCloseVisibility": false,
+    "vscoq.proof.cursor.sticky": false,
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false,
 }

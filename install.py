@@ -24,6 +24,11 @@ packages = [
     'direnv',
     'just',
     'tectonic',
+    'python3-black',
+    'ormolu',
+    'strace',
+    'rye',
+    'bat',
 ]
 
 copr_packages = [
