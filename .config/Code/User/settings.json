@@ -834,7 +834,8 @@
     "editor.experimental.useCustomCodeActionMenu": true,
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
-        "asvetliakov.vscode-neovim": 1
+        "asvetliakov.vscode-neovim": 1,
+        "kamikillerto.vscode-colorize": 1
     },
     "workbench.activityBar.location": "hidden",
     "rust-analyzer.cargo.features": [
@@ -844,4 +845,16 @@
     "vscoq.proof.cursor.sticky": false,
     "window.titleBarStyle": "custom",
     "window.customMenuBarAltFocus": false,
+    "colorize.languages": [
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "postcss",
+        "sss",
+        "stylus",
+        "xml",
+        "svg",
+        "json",
+    ]
 }

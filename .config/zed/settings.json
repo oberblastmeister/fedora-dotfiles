@@ -19,6 +19,9 @@
         "show": true,
         "show_nav_history_buttons": false
     },
+    "features": {
+        "inline_completion_provider": "supermaven"
+    },
     "format_on_save": "off",
     "ensure_final_newline_on_save": true,
     // disable cursor blink
@@ -83,15 +86,18 @@
             "tab_size": 2
         }
     },
+    "tab_bar": {
+        "show": true
+    },
     "lsp": {
         "lsp": {
-          "pyright": {
-            "settings": {
-              "python": {
-                "pythonPath": ".venv/bin/python"
-              }
+            "pyright": {
+                "settings": {
+                    "python": {
+                        "pythonPath": ".venv/bin/python"
+                    }
+                }
             }
-          }
         },
         "hls": {
             "initialization_options": {
