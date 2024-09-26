@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd ~/.config/google-chrome/Default
+rm 'Login Data'
+rm 'Login Data-journal'
