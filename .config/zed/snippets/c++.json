@@ -1,0 +1,42 @@
+{
+    "Competitive Programming Template": {
+        "prefix": "cp",
+        "body": [
+            "#ifdef LOCAL_PROJECT",
+            "#include \"dbg.h\"",
+            "#endif",
+            "#ifndef LOCAL_PROJECT",
+            "#define dbg(...)",
+            "#endif",
+            "#include <algorithm>",
+            "#include <bit>",
+            "#include <climits>",
+            "#include <cmath>",
+            "#include <cstdint>",
+            "#include <ios>",
+            "#include <iostream>",
+            "#include <limits>",
+            "#include <map>",
+            "#include <numeric>",
+            "#include <ranges>",
+            "#include <set>",
+            "#include <string>",
+            "#include <string_view>",
+            "#include <vector>",
+            "using namespace std;",
+            "namespace v = std::views;",
+            "namespace r = std::ranges;",
+            "",
+            "#define int int64_t",
+            "",
+            "template <typename T> using vec = vector<T>;",
+            "",
+            "signed main() {",
+            "    ios::sync_with_stdio(false);",
+            "$0",
+            "}",
+            ""
+        ],
+        "description": "Competitive Programming Template"
+    }
+}

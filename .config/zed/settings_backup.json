@@ -14,27 +14,27 @@
     // },
     "base_keymap": "VSCode",
     "features": {
-        // "edit_prediction_provider": "zed"
-        "edit_prediction_provider": "supermaven"
+        "edit_prediction_provider": "zed"
+        // "edit_prediction_provider": "supermaven"
     },
     "show_edit_predictions": true,
     "edit_predictions": {
         "disabled_globs": [],
-        "mode": "subtle"
+        "mode": "subtle",
     },
-    "agent": {
-        "always_allow_tool_actions": false,
+    "assistant": {
+        "always_allow_tool_actions": true,
         "inline_assistant_model": {
             "provider": "zed.dev",
-            "model": "claude-3-7-sonnet-latest"
+            "model": "claude-3-5-sonnet-latest"
         },
         "default_profile": "write",
         "default_model": {
-            "provider": "copilot_chat",
-            "model": "claude-sonnet-4"
+            "provider": "zed.dev",
+            "model": "claude-3-7-sonnet-latest"
         },
         "version": "2",
-        "enabled": true
+        "enabled": true,
         // "default_model": {
         //     "provider": "lmstudio",
         //     "model": "deepseek-r1-distill-qwen-7b"
@@ -87,9 +87,7 @@
         "diagnostics": false,
         "metrics": false
     },
-    "ui_font_size": 17.0,
-    "buffer_font_size": 17.0,
-    // "ui_font_size": 15.0,
+    // "ui_font_size": null,
     // "buffer_font_size": 15.0,
     "buffer_line_height": "standard",
     // "buffer_line_heigh6": "comfortable",
@@ -110,16 +108,13 @@
     "outline_panel": {
         "indent_guides": {
             "show": "never"
-        }
+        },
     },
     "tab_size": 4,
     "file_types": {
         "OCaml": ["mlx"]
     },
     "languages": {
-        "C++": {
-            "show_edit_predictions": false
-        },
         "Dune": {
             "tab_size": 1
         },
@@ -144,10 +139,7 @@
             "tab_size": 2
         },
         "Zig": {
-            "format_on_save": "off",
-            "inlay_hints": {
-                "enabled": false
-            },
+            "format_on_save": "on",
             "code_actions_on_format": {
                 "source.fixAll": false
             }
@@ -178,7 +170,7 @@
     },
     "tab_bar": {
         "show": true,
-        "show_nav_history_buttons": false
+        "show_nav_history_buttons": false,
     },
     "toolbar": {
         "quick_actions": false,
@@ -193,11 +185,6 @@
                 "python": {
                     "pythonPath": ".venv/bin/python"
                 }
-            }
-        },
-        "ocamllsp":{
-            "binary": {
-                // "path": "dune tools exec ocamllsp",
             }
         },
         "zls": {

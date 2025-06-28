@@ -251,7 +251,7 @@
         "command": "-workbench.action.quit"
     },
     {
-        "key": "ctrl+q",
+        "key": "ctrl+\\",
         "command": "workbench.action.closeActiveEditor",
         "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus"
     },
@@ -357,5 +357,9 @@
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
     },
 ]

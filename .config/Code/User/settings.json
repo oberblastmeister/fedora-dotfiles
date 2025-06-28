@@ -725,7 +725,7 @@
     "haskell.plugin.ghcide-completions.config.snippetsOn": false,
     "haskell.plugin.ghcide-completions.config.autoExtendOn": false,
     "java.refactor.renameFromFileExplorer": "autoApply",
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "errorLens.followCursor": "closestProblem",
     "errorLens.statusBarMessageType": "closestProblem",
     "errorLens.enabled": false,
@@ -735,7 +735,7 @@
     },
     "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false,
@@ -829,7 +829,6 @@
     "haskell.plugin.refineImports.codeLensOn": false,
     "haskell.plugin.tactics.codeLensOn": false,
     "haskell.plugin.hlint.diagnosticsOn": false,
-    "zig.zls.path": "/home/brian/.config/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
     "zig.zls.checkForUpdate": false,
     "editor.experimental.useCustomCodeActionMenu": true,
     "extensions.experimental.affinity": {
@@ -856,5 +855,19 @@
         "xml",
         "svg",
         "json",
-    ]
+    ],
+    "settingsSync.keybindingsPerPlatform": false,
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "haskell.manageHLS": "GHCup",
+    "[typst]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "[typst-code]": {
+        "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+    },
+    "liveshare.anonymousGuestApproval": "accept",
+    "zig.zls.enabled": "on",
+    "typescript.experimental.useTsgo": true,
+    "git.blame.editorDecoration.enabled": true
 }

@@ -6,3 +6,9 @@ fi
 . "$HOME/.cargo/env"
 
 [ -f "/home/brian/.ghcup/env" ] && . "/home/brian/.ghcup/env" # ghcup-env
+
+# dune
+source $HOME/.local/share/dune/env/env.bash
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/brian/.lmstudio/bin"

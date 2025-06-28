@@ -1,0 +1,17 @@
+{
+    "Expect Test": {
+        "prefix": "et",
+        "body": ["let%expect_test \"$1\" =", "  $0"],
+        "description": "Expect Test"
+    },
+    "Struct": {
+        "prefix": "str",
+        "body": ["struct", "  $0", "end"],
+        "description": "Struct"
+    },
+    "Print Message": {
+        "prefix": "pm",
+        "body": ["print_s [%message $0]"],
+        "description": "Print Message"
+    }
+}

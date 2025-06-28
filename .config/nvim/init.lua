@@ -10,6 +10,7 @@ opt.expandtab = true
 
 if vim.g.vscode then
   vim.cmd[[
+  set clipboard=unnamedplus
   nnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
   xnoremap <C-j> <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
   nnoremap <C-k> <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>

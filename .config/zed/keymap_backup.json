@@ -56,12 +56,12 @@
             "ctrl-t": "terminal_panel::ToggleFocus"
         }
     },
-    // {
-    //     "context": "OutlinePanel",
-    //     "bindings": {
-    //         "enter": "outline_panel::Open"
-    //     }
-    // },
+    {
+        "context": "OutlinePanel",
+        "bindings": {
+            "enter": "outline_panel::Open"
+        }
+    },
     // normal mode
     {
         "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -73,7 +73,6 @@
             "ctrl-w t": "terminal_panel::ToggleFocus",
             "ctrl-w p": "workspace::ToggleLeftDock",
             "ctrl-w o": "workspace::ToggleRightDock",
-            "ctrl-w ctrl-]": "editor::GoToDefinitionSplit",
             "ctrl-shift-e": "pane::RevealInProjectPanel",
             "ctrl-e": "project_panel::ToggleFocus",
             "] g": "editor::GoToDiagnostic",
@@ -86,7 +85,7 @@
             "space l a": "editor::ToggleCodeActions",
             "space l r": "editor::Rename",
             "space l R": "editor::RestartLanguageServer",
-            "space l D": "dev::OpenLanguageServerLogs",
+            "space l D": "debug::OpenLanguageServerLogs",
             "space =": "editor::Format",
             "space l l": "diagnostics::Deploy",
             "space w": "workspace::Save",
@@ -102,7 +101,7 @@
             "space g h r": "git::Restore",
             "space g h R": "git::RestoreFile",
             "space g h D": "editor::ExpandAllDiffHunks",
-            "space o": "tab_switcher::ToggleAll"
+            "space o": "tab_switcher::Toggle"
         }
     },
     // this breaks the ya[ operator for some reason

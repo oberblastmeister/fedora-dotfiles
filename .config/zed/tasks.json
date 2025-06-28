@@ -1,0 +1,7 @@
+[
+  {
+    "label": "Zig Build",
+    "command": "zig build",
+    "shell": "system"
+  }
+]
