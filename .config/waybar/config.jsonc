@@ -8,8 +8,15 @@
         "mpris",
     ],
     "modules-center": ["niri/workspaces"],
-    "modules-right": ["network", "cpu", "memory", "battery", "clock"],
-    
+    "modules-right": [
+        "network",
+        "cpu",
+        "memory",
+        "battery",
+        "clock",
+        "custom/powermenu",
+    ],
+
     "mpris": {
         "format": "{player_icon} {dynamic}",
         "format-paused": "{status_icon} <i>{dynamic}</i>",
@@ -23,7 +30,7 @@
         "max-length": 30,
         // "ignored-players": ["firefox"]
     },
-    
+
     "tray": {
         "icon-size": 21,
         "spacing": 10,
@@ -129,6 +136,11 @@
     "custom/launcher": {
         "format": " ",
         "on-click": "tofi-drun --drun-launch=true",
+    },
+
+    "custom/powermenu": {
+        "format": " ",
+        "on-click": "$HOME/.local/share/bin/tofi_power_menu.py",
     },
 
     "niri/workspaces": {
