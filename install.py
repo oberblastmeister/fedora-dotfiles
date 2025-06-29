@@ -41,10 +41,12 @@ packages = [
     'brightnessctl',
     'wpctl',
     'tofi',
+    'wob',
 ]
 
 copr_packages = [
     ('atim/bottom', 'bottom'),
+    ('isaksamsten/niriswitcher', 'niriswitcher'),
 ]
 
 def install_copr():
@@ -57,7 +59,6 @@ def install():
 
 def main():
     install()
-    # install_copr()
 
 if __name__ == '__main__':
     main()

@@ -58,7 +58,6 @@
             "template <typename T>",
             "ostream &operator<<(ostream &out, vec<T> &a) {",
             "    for (auto &x : a) out << x << \" \";",
-            "    out << \"\\n\";",
             "    return out;",
             "}",
             "",

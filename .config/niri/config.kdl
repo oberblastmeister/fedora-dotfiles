@@ -99,7 +99,7 @@ input {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
-/-output "eDP-1" {
+output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
 
@@ -109,10 +109,10 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1920x1080@120.030"
+    mode "3200x2000@165.000"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    // scale 2
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -127,7 +127,9 @@ input {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=1280 y=0
+    // position x=1280 y=0
+    
+    variable-refresh-rate on-demand=true
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -396,7 +398,7 @@ binds {
     Mod+E hotkey-overlay-title="Open an Editor: zed" { spawn "zed"; }
     Mod+W hotkey-overlay-title="Toggle waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
     Mod+Slash hotkey-overlay-title="Run an Application: tofi" { spawn "bash" "-c" "tofi-drun | xargs niri msg action spawn --"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L allow-inhibiting=false hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -481,21 +483,21 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    Mod+Shift+Page_Down { move-column-to-workspace-down; }
-    Mod+Shift+Page_Up   { move-column-to-workspace-up; }
-    Mod+Shift+U         { move-column-to-workspace-down; }
-    Mod+Shift+I         { move-column-to-workspace-up; }
+    Mod+BracketRight              { focus-workspace-down; }
+    Mod+BracketLeft              { focus-workspace-up; }
+    Mod+Shift+BracketRight { move-column-to-workspace-down; }
+    Mod+Shift+BracketLeft   { move-column-to-workspace-up; }
+    // Mod+Shift+U         { move-column-to-workspace-down; }
+    // Mod+Shift+I         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
     // ...
 
-    Mod+Ctrl+Page_Down { move-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-workspace-up; }
-    Mod+Ctrl+U         { move-workspace-down; }
-    Mod+Ctrl+I         { move-workspace-up; }
+    // Mod+Ctrl+Page_Down { move-workspace-down; }
+    // Mod+Ctrl+Page_Up   { move-workspace-up; }
+    Mod+Ctrl+BracketRight         { move-workspace-down; }
+    Mod+Ctrl+BracketLeft         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -546,15 +548,15 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
-    Mod+Ctrl+5 { move-column-to-workspace 5; }
-    Mod+Ctrl+6 { move-column-to-workspace 6; }
-    Mod+Ctrl+7 { move-column-to-workspace 7; }
-    Mod+Ctrl+8 { move-column-to-workspace 8; }
-    Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -565,8 +567,8 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+semicolon  { consume-or-expel-window-left; }
+    Mod+apostrophe { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }
@@ -643,4 +645,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
     
     Mod+Shift+W hotkey-overlay-title="Restart Waybar" { spawn "killall" "-SIGUSR2" "waybar"; }
+    
+    Alt+Tab repeat=false { spawn "gdbus" "call" "--session" "--dest" "io.github.isaksamsten.Niriswitcher" "--object-path" "/io/github/isaksamsten/Niriswitcher" "--method" "io.github.isaksamsten.Niriswitcher.application" ; }
+    Alt+Shift+Tab repeat=false { spawn "gdbus" "call" "--session" "--dest" "io.github.isaksamsten.Niriswitcher" "--object-path" "/io/github/isaksamsten/Niriswitcher" "--method" "io.github.isaksamsten.Niriswitcher.application" ; }
 }
