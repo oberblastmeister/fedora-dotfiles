@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+mkfifo /tmp/wobpipe
+tail -f /tmp/wobpipe | wob

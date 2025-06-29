@@ -1,6 +1,6 @@
 {
     "layer": "top",
-    "modules-left": ["custom/launcher", "backlight", "wireplumber"],
+    "modules-left": ["custom/launcher", "backlight", "wireplumber",  "power-profiles-daemon"],
     "modules-center": ["niri/workspaces"],
     "modules-right": ["network", "cpu", "memory", "battery", "clock"],
     
@@ -11,6 +11,18 @@
             "blueman": "bluetooth",
             "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         }
+    },
+    
+    "power-profiles-daemon": {
+      "format": "{icon}  {profile}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
     },
 
     "wlr/taskbar": {
