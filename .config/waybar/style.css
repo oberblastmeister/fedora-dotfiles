@@ -239,3 +239,16 @@ window#waybar.hidden {
   color: #161320;
   background: #f2cdcd;
 }
+
+#mpris {
+    /* font-size: 24px; */
+    margin-top: 6px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 8px;
+    border-radius: 10px;
+    transition: none;
+    color: #1a1826;
+    /*default: color: #89dceb; */
+    background: #b5e8e0;
+}

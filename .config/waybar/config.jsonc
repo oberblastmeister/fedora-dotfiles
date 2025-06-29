@@ -1,28 +1,48 @@
 {
     "layer": "top",
-    "modules-left": ["custom/launcher", "backlight", "wireplumber",  "power-profiles-daemon"],
+    "modules-left": [
+        "custom/launcher",
+        "backlight",
+        "wireplumber",
+        "power-profiles-daemon",
+        "mpris",
+    ],
     "modules-center": ["niri/workspaces"],
     "modules-right": ["network", "cpu", "memory", "battery", "clock"],
+    
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "▶",
+            "mpv": "🎵",
+        },
+        "status-icons": {
+            "paused": "⏸",
+        },
+        "max-length": 30,
+        // "ignored-players": ["firefox"]
+    },
     
     "tray": {
         "icon-size": 21,
         "spacing": 10,
         "icons": {
             "blueman": "bluetooth",
-            "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        }
+            "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png",
+        },
     },
-    
+
     "power-profiles-daemon": {
-      "format": "{icon}  {profile}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
+        "format": "{icon}  {profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": "",
+        },
     },
 
     "wlr/taskbar": {
@@ -33,7 +53,7 @@
             "Zed Editor": "Zed",
         },
     },
-    
+
     "wireplumber": {
         "tooltip": false,
         "scroll-step": 5,
@@ -107,7 +127,7 @@
     },
 
     "custom/launcher": {
-        "format": " ",
+        "format": " ",
         "on-click": "tofi-drun --drun-launch=true",
     },
 

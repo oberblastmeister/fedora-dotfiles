@@ -2,16 +2,21 @@
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
-workspace "cp"
-workspace "chat"
-workspace "browser"
-workspace "school"
+
+// The order of these declarations determines the starting order
 workspace "code 1"
 workspace "code 2"
+workspace "browser"
+workspace "cp"
+workspace "school"
+workspace "chat"
+workspace "music"
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     WOBSOCK "/tmp/wobpipe"
+    // for xwayland-sattelite
+    DISPLAY ":0"
 }
 
 switch-events {
@@ -45,8 +50,9 @@ input {
     touchpad {
         // off
         tap
+        // disable-while-typing
         dwt
-        // dwtp
+        dwtp
         // drag false
         drag-lock
         natural-scroll
@@ -297,6 +303,8 @@ spawn-at-startup "swww" "img" "/home/brian/projects/gruvbox-wallpapers/wallpaper
 
 spawn-at-startup "~/.local/share/bin/start_wob"
 
+spawn-at-startup "xwayland-satellite"
+
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
@@ -383,7 +391,7 @@ binds {
     Mod+B hotkey-overlay-title="Open a Browser: google-chrome" { spawn "google-chrome-stable"; }
     Mod+E hotkey-overlay-title="Open an Editor: zed" { spawn "zed"; }
     Mod+W hotkey-overlay-title="Toggle waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
-    Mod+Slash hotkey-overlay-title="Run an Application: tofi" { spawn "tofi-drun" "--drun-launch=true"; }
+    Mod+Slash hotkey-overlay-title="Run an Application: tofi" { spawn "bash" "-c" "tofi-drun | xargs niri msg action spawn --"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
