@@ -17,7 +17,7 @@
         // "edit_prediction_provider": "zed"
         "edit_prediction_provider": "supermaven"
     },
-    "show_edit_predictions": true,
+    "show_edit_predictions": false,
     "edit_predictions": {
         "disabled_globs": [],
         "mode": "subtle"
@@ -197,7 +197,9 @@
         },
         "ocamllsp":{
             "binary": {
-                // "path": "dune tools exec ocamllsp",
+                "path": "/home/brian/.local/bin/ocamllsp"
+                // "path": "dune",
+                // "arguments": ["tools", "exec", "ocamllsp"]
             }
         },
         "zls": {

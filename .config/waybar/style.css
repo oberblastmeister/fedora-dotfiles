@@ -1,10 +1,17 @@
+/* 
+how to style tooltips
+https://github.com/Alexays/Waybar/discussions/1824
+*/
+
 * {
     border: none;
     border-radius: 8;
     font-family: "CaskaydiaCove Nerd Font";
     /* font-family: "Cascadia Code"; */
+    /* font-size: 12px; */
     font-size: 12px;
-    min-height: 20px;
+    /* min-height: 20px; */
+    min-height: 8px;
 }
 
 window#waybar {

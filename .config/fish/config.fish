@@ -27,6 +27,7 @@ if status is-interactive
     alias t=trashy
     alias tp="trashy put"
     alias bazel="bazelisk"
+    alias zig=anyzig
     abbr -a opam_tools opam install ocaml-lsp-server ocamlformat utop ocaml-manual odig sherlodoc patdiff ocaml-index
     abbr -a cpnixos cp /run/media/brian/nixos/home/brian/
     abbr -a dunec dune build @check

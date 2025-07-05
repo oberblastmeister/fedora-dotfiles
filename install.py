@@ -35,6 +35,7 @@ packages = [
     # niri stuff
     'niri',
     'swaylock',
+    'swayidle',
     'mako',
     'wlsunset',
     'swww'
